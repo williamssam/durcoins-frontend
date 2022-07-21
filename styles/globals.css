@@ -1,16 +1,24 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+	margin-inline: auto;
+	width: min(1300px, 100vw - 3rem);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+	@apply active:scale-95 transition-transform;
 }
 
-* {
-  box-sizing: border-box;
+.hero-bg {
+	background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='21' height='21' patternTransform='scale(4) rotate(15)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(221, 39%, 11%, 1)'/><path d='M10-6V6M10 14v12M26 10H14M6 10H-6' transform='translate(0.5,0)' stroke-linejoin='round' stroke-linecap='round' stroke-width='1' stroke='hsla(221, 26%, 15%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
+
+.price-section-bg {
+	background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(65)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(229, 0%, 98%, 1)'/><path d='M15 5h10v30H15zM35-5V5H5V-5zM35 35v10H5V35zM35-15h10v30H35zM55 15v10H25V15zM15 15v10h-30V15zM35 25h10v30H35zM-5 25H5v30H-5zM-5-15H5v30H-5z'  stroke-width='8' stroke='hsla(0, 0%, 100%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+/* .begin-journey-bg {
+	background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='21' height='21' patternTransform='scale(2) rotate(75)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(215, 17%, 24%, 1)'/><path d='M10-6V6M10 14v12M26 10H14M6 10H-6' transform='translate(0.5,0)' stroke-linejoin='round' stroke-linecap='round' stroke-width='2' stroke='hsla(215, 10%, 39%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+} */
