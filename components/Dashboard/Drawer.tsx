@@ -4,7 +4,12 @@ import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { Fragment } from 'react';
 
-const Drawer = ({ isOpen, closeModal }) => {
+interface DrawerProps {
+	isOpen: boolean;
+	closeModal: () => void;
+}
+
+const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 	return (
 		<Transition appear show={isOpen} as={Fragment}>
 			<Dialog as='div' className='relative z-10' onClose={closeModal}>
