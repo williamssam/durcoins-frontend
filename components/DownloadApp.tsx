@@ -4,12 +4,12 @@ import playStoreImg from '../public/play-store.png';
 export const DownloadApp = () => {
 	return (
 		<section className='mt-32'>
-			<div className='container grid md:grid-cols-2 lowercase'>
-				<header className='text-center'>
+			<div className='container grid md:grid-cols-2'>
+				<header className='text-center md:text-left'>
 					<h2 className='text-3xl md:text-5xl font-black text-gray-900'>
 						Download our app
 					</h2>
-					<p className='pt-2 text-gray-600'>
+					<p className='pt-2 text-gray-600 md:w-96'>
 						Get the best mobile experience on <strong>duro-coins</strong>{' '}
 						mobile. Download our app today
 					</p>

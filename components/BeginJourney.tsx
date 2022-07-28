@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const BeginJourney = () => {
 	return (
 		<section className='bg-gray-600 text-gray-100 py-20 mt-32'>
-			<div className='container flex flex-col items-center lowercase'>
+			<div className='container flex flex-col items-center'>
 				<header className='text-center'>
 					<h2 className='text-4xl font-bold'>
 						Ready to begin your crypto journey?

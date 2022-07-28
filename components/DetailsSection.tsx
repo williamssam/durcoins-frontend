@@ -28,7 +28,7 @@ export const DetailsSection = () => {
 	];
 	return (
 		<section>
-			<div className='container mt-32 flex flex-col items-center lowercase'>
+			<div className='container mt-32 flex flex-col items-center'>
 				<header className='text-center'>
 					<div className='max-w-xl'>
 						<h2 className='text-3xl md:text-5xl font-black text-gray-900'>

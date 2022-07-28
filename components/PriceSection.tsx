@@ -30,7 +30,7 @@ export const PriceSection = () => {
 						<p>image</p>
 						<div>
 							<h4 className='font-bold text-lg leading-4'>USDT</h4>
-							<p>USDT-TRC2</p>
+							<p>USDT</p>
 						</div>
 					</div>
 

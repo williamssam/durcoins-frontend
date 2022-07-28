@@ -1,11 +1,12 @@
 import ArrowLeft from '@/assets/icons/ArrowLeft';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { ReactElement } from 'react';
-import btcLogo from '@/public/btc-logo.png';
-import Image from 'next/image';
 import Warning from '@/assets/icons/Warning';
-import qrCode from '@/public/qr-sample.svg';
+import { Converter } from '@/components/Dashboard/Converter';
+import DashboardLayout from '@/components/Dashboard/DashboardLayout';
+import qrCode from '@/public/bitcoinaddress.svg';
+import btcLogo from '@/public/btc-logo.png';
 import Head from 'next/head';
+import Image from 'next/image';
+import { ReactElement } from 'react';
 
 const Coin = () => {
 	return (
@@ -28,7 +29,7 @@ const Coin = () => {
 						<div>
 							<h3 className='font-black text-5xl mt-4'>&#8358;655.50/USD</h3>
 							<p className='text-gray-600'>
-								&#8358;14,845,914.765 / $22,648.23 / BTC{' '}
+								&#8358;14,845,914.765 / $22,648.23 / BTC
 							</p>
 						</div>
 						<div className='bg-red-200 mt-10 py-5 px-8 rounded-md relative overflow-hidden'>
@@ -52,6 +53,7 @@ const Coin = () => {
 								</ul>
 							</div>
 						</div>
+						<Converter />
 					</div>
 
 					<div className='flex flex-col justify-between '>
@@ -71,7 +73,7 @@ const Coin = () => {
 								Copy deposit address
 							</p>
 							<p className='text-lg text-center text-blue-600 mt-3 font-bold'>
-								bc1qyntxsv9rw8n9tflglmvn7zya5lj7rdxwjnwfyz
+								1BWThfKLm83cVvY7oN76g5sj4cnh9qPY58
 							</p>
 							<button className='bg-black mt-6 w-full p-2 text-lg rounded-md text-gray-100'>
 								Copy BTC Address

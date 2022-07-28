@@ -1,7 +1,7 @@
 export const GetStarted = () => {
 	return (
 		<section className='bg-gray-100 py-20 mt-32'>
-			<div className='container flex flex-col items-center lowercase'>
+			<div className='container flex flex-col items-center'>
 				<header className='text-center'>
 					<h2 className='text-3xl md:text-5xl font-black text-gray-900'>
 						Get started in just a few minutes

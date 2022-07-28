@@ -5,7 +5,7 @@ import { PriceSection } from './PriceSection';
 export const Header = () => {
 	return (
 		<header className='text-gray-900 hero-bg'>
-			<div className='container flex flex-col justify-around md:grid md:grid-cols-5 md:gap-5 min-h-screen lowercase'>
+			<div className='container flex flex-col justify-around md:grid md:grid-cols-5 md:gap-5 min-h-screen'>
 				<section className='col-span-3 grid'>
 					<Nav />
 

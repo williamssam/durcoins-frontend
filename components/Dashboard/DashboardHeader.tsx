@@ -67,8 +67,8 @@ const DashboardHeader = () => {
 	];
 	const router = useRouter();
 	return (
-		<header className='col-span-1 m-3'>
-			<div className='bg-black text-gray-100 h-full rounded-xl px-8 py-10 flex flex-col justify-between'>
+		<header className='col-span-1 m-2'>
+			<div className='bg-black text-gray-100 h-full rounded-xl px-8 py-10 flex flex-col justify-between relative'>
 				<h1 className='font-black tracking-wide text-2xl'>Dura-coins</h1>
 
 				<nav className='flex flex-col gap-9'>
@@ -117,6 +117,10 @@ const DashboardHeader = () => {
 					<Logout />
 					<span>Logout</span>
 				</a>
+
+				{/* <p className='absolute text-xs bottom-2 text-gray-600'>
+					Design and built by <a href='#'>ghostdeveloper</a>
+				</p> */}
 			</div>
 		</header>
 	);
