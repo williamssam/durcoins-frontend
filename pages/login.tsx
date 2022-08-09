@@ -2,7 +2,6 @@ import { Input } from '@/components/Input';
 import Google from 'assets/icons/Google';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
 
 const Login = () => {
 	return (

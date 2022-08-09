@@ -6,16 +6,20 @@ import qrCode from '@/public/bitcoinaddress.svg';
 import btcLogo from '@/public/btc-logo.png';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 
 const Coin = () => {
+	const router = useRouter();
 	return (
 		<>
 			<Head>
 				<title>Coin - Duro-coin</title>
 			</Head>
 			<section>
-				<button className='flex items-center gap-1 text-gray-800 rounded-md mt-5'>
+				<button
+					onClick={() => router.back()}
+					className='flex items-center gap-1 text-gray-800 rounded-md mt-5'>
 					<ArrowLeft />
 					Back
 				</button>
@@ -56,7 +60,7 @@ const Coin = () => {
 						<Converter />
 					</div>
 
-					<div className='flex flex-col justify-between '>
+					<div className='flex flex-col justify-between bg-gray-300 w-max rounded-md justify-self-center p-5'>
 						<div className='mx-auto'>
 							<p className='text-center text-gray-700 uppercase text-sm'>
 								Scan to copy deposit address

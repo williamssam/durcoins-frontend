@@ -1,13 +1,11 @@
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import Head from 'next/head';
-import Image from 'next/image';
-import { ReactElement } from 'react';
+import { coins } from '@/data/coins';
 import btcLogo from '@/public/btc-logo.png';
 import ethLogo from '@/public/eth-logo.png';
-import bnbLogo from '@/public/bnb-logo.png';
-import usdtLogo from '@/public/usdt-logo.png';
-import { coins } from '@/data/coins';
+import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
 const Sell = () => {
 	return (
@@ -17,8 +15,10 @@ const Sell = () => {
 			</Head>
 			<section className='pt-8'>
 				<div>
-					<h3 className='font-bold text-3xl'>Sell Crypto or GiftCard</h3>
-					<p>What would you love to sell?</p>
+					<h3 className='font-black text-5xl'>Sell Crypto or GiftCard</h3>
+					<p className='pt-1'>
+						What would you love to sell, we buy both crypto and giftcards?
+					</p>
 				</div>
 
 				<div>

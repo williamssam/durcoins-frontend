@@ -1,22 +1,42 @@
+import Add from '@/assets/icons/Add';
 import Bank from '@/assets/icons/Bank';
 import Delete from '@/assets/icons/Delete';
 import Edit from '@/assets/icons/Edit';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
+import Modal from '@/components/Modal';
 import Head from 'next/head';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 const BankDetails = () => {
+	let [isOpen, setIsOpen] = useState(false);
+
+	function closeModal() {
+		setIsOpen(false);
+	}
+
+	function openModal() {
+		setIsOpen(true);
+	}
+
 	return (
 		<>
 			<Head>
 				<title>Bank Details - Dura-coins</title>
 			</Head>
+			<Modal
+				title='Update Account Details'
+				closeModal={closeModal}
+				isOpen={isOpen}
+			/>
+
 			<section className='pt-8'>
 				<header className='flex items-center gap-10'>
 					<h3 className='font-bold text-3xl'>Bank Details</h3>
 
-					<button className='py-1 px-4 bg-black rounded text-gray-100 text-sm'>
-						Add Account Details
+					<button
+						onClick={openModal}
+						className='py-1 pl-2 pr-4 bg-black rounded text-gray-100 text-sm flex items-center gap-2'>
+						<Add /> Add Account
 					</button>
 				</header>
 
@@ -34,7 +54,9 @@ const BankDetails = () => {
 							</button>
 
 							<div className='text-gray-500 flex flex-col items-start gap-1 mt-3'>
-								<button className='p-2 rounded-full transition-all hover:bg-blue-200 hover:text-blue-500'>
+								<button
+									onClick={openModal}
+									className='p-2 rounded-full transition-all hover:bg-blue-200 hover:text-blue-500'>
 									<Edit />
 								</button>
 								<button className='p-2 rounded-full transition-all hover:bg-red-200 hover:text-red-500'>
@@ -64,7 +86,7 @@ const BankDetails = () => {
 							</li> */}
 						</ul>
 					</div>
-					<div className='flex items-start justify-between bg-gray-50 px-8 py-6 rounded-md relative overflow-hidden'>
+					<div className='flex items-start justify-between bg-gray-900 text-gray-100 px-8 py-6 rounded-md relative overflow-hidden'>
 						<div className='absolute -left-8 bottom-0 text-gray-300 text-opacity-20'>
 							<Bank size={200} />
 						</div>

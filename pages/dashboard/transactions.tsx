@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { ReactElement, useState } from 'react';
 
 const Transactions = () => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	function closeModal() {
 		setIsOpen(false);
@@ -24,29 +24,29 @@ const Transactions = () => {
 				<title>Transactions - Dura-coins</title>
 			</Head>
 			<section className='mt-8 text-gray-900'>
-				<h3 className='font-bold text-3xl'>Transactions</h3>
+				<h3 className='font-black text-5xl'>Transactions</h3>
 
 				{/* summary */}
-				<div className='grid grid-cols-3 gap-6 mt-5'>
-					<div className='py-5 px-8 bg-red-50 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
-						<div className='text-gray-600'>
+				<div className='grid grid-cols-3 gap-6 mt-10 text-gray-100'>
+					<div className='py-5 px-8 bg-gray-900 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
+						<div className='text-gray-300'>
 							{/* <p>image</p> */}
 							<Runs size={30} />
 							<p className='font-bold uppercase '>Total runs</p>
 						</div>
 						<p className='font-black text-4xl'>100</p>
 					</div>
-					<div className='py-5 px-8 bg-blue-50 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
-						<div className='text-gray-600'>
+					<div className='py-5 px-8 bg-gray-900 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
+						<div className='text-gray-300'>
 							<Bag size={30} />
 							<p className='font-bold uppercase text-sm'>My bag</p>
 						</div>
 						<p className='font-black text-4xl'>100,000,000</p>
 					</div>
-					<div className='py-5 px-8 bg-green-50 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
+					<div className='py-5 px-8 bg-gray-900 rounded-md flex items-center justify-between transition-all hover:shadow-duro-coins hover:scale-105'>
 						<div>
 							<p>image</p>
-							<p className='font-bold uppercase text-gray-600'>My bag</p>
+							<p className='font-bold uppercase text-gray-300'>My bag</p>
 						</div>
 						<p className='font-black text-4xl'>100,000,000</p>
 					</div>
@@ -68,10 +68,10 @@ const Transactions = () => {
 						</button>
 					</header>
 
-					<div className='flex flex-col gap-1 mt-5'>
+					<div className='flex flex-col gap-2 mt-5'>
 						<button
 							onClick={openModal}
-							className='flex items-center justify-between bg-gray-300 py-2 px-4 transition-all hover:bg-stone-50 active:scale-100'>
+							className='flex items-center justify-between bg-gray-50 py-3 px-4 transition-all hover:bg-stone-50 active:scale-100'>
 							<div className='flex items-center gap-4'>
 								<Image
 									src={btcLogo}
@@ -95,7 +95,7 @@ const Transactions = () => {
 								</p>
 							</div>
 						</button>
-						<button className='flex items-center justify-between bg-gray-300 py-2 px-4 transition-all hover:bg-stone-50 active:scale-100'>
+						<button className='flex items-center justify-between bg-gray-50 py-3 px-4 transition-all hover:bg-stone-50 active:scale-100'>
 							<div className='flex items-center gap-4'>
 								<Image
 									src={btcLogo}
@@ -119,7 +119,7 @@ const Transactions = () => {
 								</p>
 							</div>
 						</button>
-						<button className='flex items-center justify-between bg-gray-300 py-2 px-4 transition-all hover:bg-stone-50 active:scale-100'>
+						<button className='flex items-center justify-between bg-gray-50 py-3 px-4 transition-all hover:bg-stone-50 active:scale-100'>
 							<div className='flex items-center gap-4'>
 								<Image
 									src={btcLogo}

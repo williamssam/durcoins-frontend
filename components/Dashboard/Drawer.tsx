@@ -30,7 +30,7 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 						<Transition.Child
 							as={Fragment}
 							enter='ease-in duration-200'
-							enterFrom='opacity-0 translate-x-full'
+							enterFrom='opacity-0 translate-x-0'
 							enterTo='opacity-100 translate-x-0'
 							leave='ease-out duration-200'
 							leaveFrom='opacity-100 translate-x-0'

@@ -21,7 +21,7 @@
 			"@/public/*": ["public/*"],
 			"@/utils/*": ["utils/*"],
 			"@/data/*": ["data/*"],
-			"@/assets/icons/*": ["assets/icons/*"]
+			"@/assets/*": ["assets/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jsconfig.json"],

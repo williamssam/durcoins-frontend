@@ -1,11 +1,9 @@
-import Activities from '@/assets/icons/Activities';
 import Bank from '@/assets/icons/Bank';
 import DashboardIcon from '@/assets/icons/DashboardIcon';
 import Help from '@/assets/icons/Help';
 import Logout from '@/assets/icons/Logout';
 import Sell from '@/assets/icons/Sell';
 import Transactions from '@/assets/icons/Transactions';
-import User from '@/assets/icons/User';
 import Wallet from '@/assets/icons/Wallet';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -33,12 +31,6 @@ const DashboardHeader = () => {
 					url: '/dashboard/wallet',
 					icon: <Wallet />,
 				},
-				{
-					id: 4,
-					title: 'Activities',
-					url: '/dashboard/activities',
-					icon: <Activities />,
-				},
 			],
 		},
 		{
@@ -49,12 +41,6 @@ const DashboardHeader = () => {
 					title: 'Bank Details',
 					url: '/dashboard/bank-details',
 					icon: <Bank />,
-				},
-				{
-					id: 2,
-					title: 'Profile',
-					url: '/dashboard/profile',
-					icon: <User />,
 				},
 				{
 					id: 3,

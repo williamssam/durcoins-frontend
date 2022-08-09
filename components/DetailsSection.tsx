@@ -20,7 +20,7 @@ export const DetailsSection = () => {
 		},
 		{
 			id: 3,
-			icon: <Wallet />,
+			icon: <Wallet size={48} />,
 			title: 'Crypto Wallet',
 			content:
 				'Instantly swap and trade your crypto assets on the go without much stress',
@@ -28,7 +28,7 @@ export const DetailsSection = () => {
 	];
 	return (
 		<section>
-			<div className='container mt-32 flex flex-col items-center'>
+			<div className='container mt-20 md:mt-28 flex flex-col items-center'>
 				<header className='text-center'>
 					<div className='max-w-xl'>
 						<h2 className='text-3xl md:text-5xl font-black text-gray-900'>
