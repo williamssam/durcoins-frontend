@@ -19,7 +19,7 @@ const Coin = () => {
 			<section>
 				<button
 					onClick={() => router.back()}
-					className='flex items-center gap-1 text-gray-800 rounded-md mt-5'>
+					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
 					<ArrowLeft />
 					Back
 				</button>
@@ -60,7 +60,7 @@ const Coin = () => {
 						<Converter />
 					</div>
 
-					<div className='flex flex-col justify-between bg-gray-300 w-max rounded-md justify-self-center p-5'>
+					<div className='flex flex-col justify-between bg-gray-100 w-max rounded-md justify-self-center p-5'>
 						<div className='mx-auto'>
 							<p className='text-center text-gray-700 uppercase text-sm'>
 								Scan to copy deposit address
@@ -72,7 +72,7 @@ const Coin = () => {
 							OR
 						</p>
 
-						<div className='mx-auto mt-10'>
+						<div className='mx-auto mt-8'>
 							<p className='text-center text-gray-700 uppercase text-sm'>
 								Copy deposit address
 							</p>

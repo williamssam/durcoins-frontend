@@ -1,6 +1,7 @@
 import Close from '@/assets/icons/Close';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
+import { Input } from './Input';
 
 interface ModalProps {
 	closeModal: () => void;
@@ -21,7 +22,7 @@ const Modal = ({ closeModal, isOpen, title }: ModalProps) => {
 						leave='ease-in duration-200'
 						leaveFrom='opacity-100'
 						leaveTo='opacity-0'>
-						<div className='fixed inset-0 bg-black bg-opacity-25' />
+						<div className='fixed inset-0 bg-black bg-opacity-80' />
 					</Transition.Child>
 
 					<div className='fixed inset-0 overflow-y-auto'>
@@ -46,25 +47,10 @@ const Modal = ({ closeModal, isOpen, title }: ModalProps) => {
 											<Close />
 										</button>
 									</header>
-									<div className='mt-2 flex flex-col gap-4 p-6'>
-										<div className='flex flex-col gap-1'>
-											<label htmlFor=''>Account Name</label>
-											<input
-												type='text'
-												name=''
-												id=''
-												className='border-2 border-gray-500 rounded-md py-2 px-3 transition-all focus:outline-none focus:bg-gray-200'
-											/>
-										</div>
-										<div className='flex flex-col gap-1'>
-											<label htmlFor=''>Account No</label>
-											<input
-												type='number'
-												name=''
-												id=''
-												className='border-2 border-gray-500 rounded-md py-2 px-3 transition-all focus:outline-none focus:bg-gray-200'
-											/>
-										</div>
+									<div className='mt-2 flex flex-col gap-8 p-6'>
+										<Input type='text' label='Account Name' />
+										<Input type='number' label='Account Number' />
+
 										{/* select field */}
 										{/* <div className='flex flex-col gap-1'>
 											<label htmlFor=''>Password</label>
@@ -80,7 +66,7 @@ const Modal = ({ closeModal, isOpen, title }: ModalProps) => {
 									<div className='mt-4 px-6 pb-6'>
 										<button
 											type='button'
-											className='inline-flex justify-center rounded-md border border-transparent bg-gray-300 px-4 py-2 text-sm font-medium text-gray-900 transition-all hover:bg-gray-200 focus:outline-none'
+											className='inline-flex justify-center rounded-md border border-transparent bg-gray-300 px-4 py-2 text-sm font-medium text-gray-900 transition-all hover:bg-gray-900 hover:text-gray-100 focus:outline-none'
 											onClick={closeModal}>
 											Update!
 										</button>

@@ -45,7 +45,7 @@ export const DetailsSection = () => {
 				<ul className='grid md:grid-cols-3 gap-10 max-w-4xl mt-16'>
 					{details?.map(({ id, title, content, icon }) => (
 						<li
-							className='bg-gray-100 py-10 px-7 rounded-md text-gray-900 '
+							className='bg-gray-200 py-10 px-7 rounded-md text-gray-900 '
 							key={id}>
 							{icon}
 							<div className='mt-4'>

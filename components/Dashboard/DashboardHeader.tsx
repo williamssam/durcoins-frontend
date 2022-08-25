@@ -15,7 +15,7 @@ const DashboardHeader = () => {
 			navs: [
 				{
 					id: 1,
-					title: 'Sell',
+					title: 'Sell/Buy',
 					url: '/dashboard/sell',
 					icon: <Sell />,
 				},

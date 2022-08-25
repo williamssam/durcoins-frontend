@@ -15,9 +15,10 @@ const Sell = () => {
 			</Head>
 			<section className='pt-8'>
 				<div>
-					<h3 className='font-black text-5xl'>Sell Crypto or GiftCard</h3>
+					<h3 className='font-black text-5xl'>Sell/Buy Crypto & GiftCard</h3>
 					<p className='pt-1'>
-						What would you love to sell, we buy both crypto and giftcards?
+						What would you love to sell or buy, we buy and sell both crypto and
+						giftcards?
 					</p>
 				</div>
 
@@ -96,7 +97,7 @@ const Sell = () => {
 				</div>
 
 				<p className='mt-20 text-sm'>
-					Can&apos;t find what you want to buy?{' '}
+					Can&apos;t find what you want to sell/buy?{' '}
 					<a href='#' className='font-bold'>
 						Contact us now!
 					</a>

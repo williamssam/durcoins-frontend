@@ -12,6 +12,9 @@ module.exports = {
 			boxShadow: {
 				'duro-coins': '0px 6px 18px rgba(0, 0, 0, 0.06)',
 			},
+			backgroundImage: {
+				'signup-bg': "url('../public/signup-bg.jpg')",
+			},
 		},
 	},
 	plugins: [],

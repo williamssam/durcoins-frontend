@@ -7,6 +7,10 @@ import Modal from '@/components/Modal';
 import Head from 'next/head';
 import { ReactElement, useState } from 'react';
 
+interface AccountType {
+	type: string;
+}
+
 const BankDetails = () => {
 	let [isOpen, setIsOpen] = useState(false);
 
@@ -17,6 +21,14 @@ const BankDetails = () => {
 	function openModal() {
 		setIsOpen(true);
 	}
+
+	const changeModalTitle = ({ type }: AccountType) => {
+		if (type === 'add-account') {
+			return 'Add Account Details';
+		} else if (type === 'edit-account') {
+			return 'Update Account Details';
+		}
+	};
 
 	return (
 		<>
@@ -31,7 +43,7 @@ const BankDetails = () => {
 
 			<section className='pt-8'>
 				<header className='flex items-center gap-10'>
-					<h3 className='font-bold text-3xl'>Bank Details</h3>
+					<h3 className='font-black text-5xl'>Bank Details</h3>
 
 					<button
 						onClick={openModal}
