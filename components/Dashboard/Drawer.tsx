@@ -35,7 +35,7 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 							leave='ease-out duration-200'
 							leaveFrom='opacity-100 translate-x-0'
 							leaveTo='opacity-0 translate-x-full'>
-							<Dialog.Panel className='w-[350px] flex flex-col justify-center overflow-hidden min-h-screen bg-gray-50 p-6 text-left align-middle shadow-2xl text-gray-900 transition-all'>
+							<Dialog.Panel className='w-[350px] flex flex-col overflow-hidden min-h-screen bg-gray-50 p-6 text-left align-middle shadow-2xl text-gray-900 transition-all'>
 								<header className='flex flex-col items-center text-center'>
 									<div>
 										<div className='flex items-center justify-center gap-2'>
@@ -56,7 +56,7 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 										<h3 className='text-xs uppercase font-bold text-gray-500'>
 											Status
 										</h3>
-										<p>Approved</p>
+										<p className='font-bold text-green-500'>Approved</p>
 									</li>
 									<li>
 										<h3 className='text-xs uppercase font-bold text-gray-500'>
@@ -126,7 +126,7 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 									type='button'
 									className='inline-flex justify-center rounded-md border border-transparent bg-gray-300 px-4 py-2 mt-5 text-sm text-gray-900 font-bold hover:bg-gray-400 focus:outline-none'
 									onClick={closeModal}>
-									Got it, thanks!
+									Got it, thanks! 😍
 								</button>
 								{/* <div className='absolute bottom-0 right-0 -z-[1]'>
 									<Image

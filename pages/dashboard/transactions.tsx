@@ -1,8 +1,9 @@
 import Bag from '@/assets/icons/Bag';
-import Filter from '@/assets/icons/Filter';
 import Runs from '@/assets/icons/Runs';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
 import Drawer from '@/components/Dashboard/Drawer';
+import { Select } from '@/components/Select';
+import { filter, people } from '@/data/options';
 import btcLogo from '@/public/btc-logo.png';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -55,17 +56,22 @@ const Transactions = () => {
 				{/* table */}
 				<section className='mt-10'>
 					<header className='flex items-center gap-10'>
-						<select name='' id=''>
-							<option value='bitcoin'>Bitcoin</option>
-							<option value='usdt'>USDT</option>
-						</select>
+						<div className='flex items-center gap-3'>
+							<span className='text-sm'>Filter by Coin</span>
+							<Select options={people} />
+						</div>
 
-						<button>
+						<div className='flex items-center gap-3'>
+							<p className='text-sm'>Filter by Type</p>
+							<Select options={filter} />
+						</div>
+
+						{/* <button>
 							<div className='flex items-center gap-2'>
 								All
 								<Filter />
 							</div>
-						</button>
+						</button> */}
 					</header>
 
 					<div className='flex flex-col gap-2 mt-5'>

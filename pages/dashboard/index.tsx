@@ -3,6 +3,7 @@ import DashboardLayout from '@/components/Dashboard/DashboardLayout';
 import { RadioGroup } from '@headlessui/react';
 import Head from 'next/head';
 import { ReactElement, useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 import { NextPageWithLayout } from '../_app';
 
 const Dashboard: NextPageWithLayout = () => {

@@ -2,31 +2,31 @@ import Add from '@/assets/icons/Add';
 import Bank from '@/assets/icons/Bank';
 import Delete from '@/assets/icons/Delete';
 import Edit from '@/assets/icons/Edit';
+import { AddBankModal } from '@/components/AddBankModal';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
 import Modal from '@/components/Modal';
+import { UpdateBankModal } from '@/components/UpdateBankModal';
 import Head from 'next/head';
-import { ReactElement, useState } from 'react';
-
-interface AccountType {
-	type: string;
-}
+import { ReactElement, SetStateAction, useState } from 'react';
 
 const BankDetails = () => {
 	let [isOpen, setIsOpen] = useState(false);
+	const [modalType, setModalType] = useState('');
 
 	function closeModal() {
 		setIsOpen(false);
 	}
 
-	function openModal() {
+	function openModal(type: SetStateAction<string>) {
 		setIsOpen(true);
+		setModalType(type);
 	}
 
-	const changeModalTitle = ({ type }: AccountType) => {
-		if (type === 'add-account') {
-			return 'Add Account Details';
-		} else if (type === 'edit-account') {
-			return 'Update Account Details';
+	const changeModal = () => {
+		if (modalType === 'add-account') {
+			return <AddBankModal closeModal={closeModal} />;
+		} else if (modalType === 'edit-account') {
+			return <UpdateBankModal closeModal={closeModal} />;
 		}
 	};
 
@@ -35,18 +35,17 @@ const BankDetails = () => {
 			<Head>
 				<title>Bank Details - Dura-coins</title>
 			</Head>
-			<Modal
-				title='Update Account Details'
-				closeModal={closeModal}
-				isOpen={isOpen}
-			/>
+			<Modal closeModal={closeModal} isOpen={isOpen}>
+				{/* <UpdateBankModal closeModal={closeModal} /> */}
+				{changeModal()}
+			</Modal>
 
 			<section className='pt-8'>
 				<header className='flex items-center gap-10'>
 					<h3 className='font-black text-5xl'>Bank Details</h3>
 
 					<button
-						onClick={openModal}
+						onClick={() => openModal('add-account')}
 						className='py-1 pl-2 pr-4 bg-black rounded text-gray-100 text-sm flex items-center gap-2'>
 						<Add /> Add Account
 					</button>
@@ -67,7 +66,7 @@ const BankDetails = () => {
 
 							<div className='text-gray-500 flex flex-col items-start gap-1 mt-3'>
 								<button
-									onClick={openModal}
+									onClick={() => openModal('edit-account')}
 									className='p-2 rounded-full transition-all hover:bg-blue-200 hover:text-blue-500'>
 									<Edit />
 								</button>
@@ -92,10 +91,6 @@ const BankDetails = () => {
 								<p className='uppercase text-xs tracking-wider'>Bank Name</p>
 								<p className='text-lg font-bold'>United Bank of Africa</p>
 							</li>
-							{/* <li>
-								<p className='uppercase text-xs tracking-wider'	>Account Type</p>
-								<p className='text-xl font-bold'>Savings</p>
-							</li> */}
 						</ul>
 					</div>
 					<div className='flex items-start justify-between bg-gray-900 text-gray-100 px-8 py-6 rounded-md relative overflow-hidden'>

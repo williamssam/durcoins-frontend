@@ -8,13 +8,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const Coin = () => {
 	const router = useRouter();
+	const notify = () => {
+		toast.success('🥳 Address Copied!!');
+	};
 	return (
 		<>
 			<Head>
-				<title>Coin - Duro-coin</title>
+				<title>Sell (Coin) - Duro-coin</title>
 			</Head>
 			<section>
 				<button
@@ -60,7 +65,7 @@ const Coin = () => {
 						<Converter />
 					</div>
 
-					<div className='flex flex-col justify-between bg-gray-100 w-max rounded-md justify-self-center p-5'>
+					<div className='flex flex-col justify-between bg-gray-50 w-max rounded-md justify-self-center p-5 shadow-duro-coins'>
 						<div className='mx-auto'>
 							<p className='text-center text-gray-700 uppercase text-sm'>
 								Scan to copy deposit address
@@ -79,13 +84,25 @@ const Coin = () => {
 							<p className='text-lg text-center text-blue-600 mt-3 font-bold'>
 								1BWThfKLm83cVvY7oN76g5sj4cnh9qPY58
 							</p>
-							<button className='bg-black mt-6 w-full p-2 text-lg rounded-md text-gray-100'>
+							<button
+								onClick={notify}
+								className='bg-black mt-6 w-full p-2 text-lg rounded-md text-gray-100'>
 								Copy BTC Address
 							</button>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<ToastContainer
+				position='bottom-right'
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop
+				closeOnClick
+				rtl={false}
+				theme='dark'
+			/>
 		</>
 	);
 };
