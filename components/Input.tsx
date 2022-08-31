@@ -19,7 +19,7 @@ export const Input = ({ type, label }: InputProps) => {
 					autoComplete='false'
 					className='py-1 w-full text-gray-900 border-b-2 border-b-gray-400 outline-none focus:border-gray-400 transition duration-200 peer valid:border-blue-600 bg-transparent'
 				/>
-				<span className='text-gray-400 absolute left-0 top-1/2 -translate-y-1/2 transition duration-200 peer-focus:text-gray-600 peer-focus:transform peer-focus:-translate-y-7 peer-focus:text-xs peer-valid:-translate-y-7 peer-valid:text-xs peer-valid:text-blue-600'>
+				<span className='text-gray-400 absolute left-0 top-1/2 -translate-y-1/2 transition duration-200 peer-focus:text-gray-600 peer-focus:transform peer-focus:-translate-y-7 peer-focus:text-xs peer-valid:-translate-y-7 peer-valid:text-xs peer-valid:text-blue-600 peer-valid:font-bold peer-focus:font-bold'>
 					{label}
 				</span>
 

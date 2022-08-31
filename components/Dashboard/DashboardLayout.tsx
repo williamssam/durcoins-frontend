@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
 		<main className='grid grid-cols-5 min-h-screen'>
 			<DashboardHeader />
 			<div className='bg-gray-200 col-span-4 px-10 py-3'>
-				<div className='grid grid-cols-2 items-center  bg-gray-50 py-2 px-10 rounded-md'>
+				<div className='grid grid-cols-2 items-center bg-white py-2 px-10 rounded-md shadow-duro-coins'>
 					<p className='justify-self-end font-bold uppercase tracking-wider'>
 						Duro-coins
 					</p>

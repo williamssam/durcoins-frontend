@@ -62,7 +62,7 @@ const DashboardHeader = () => {
 						<a
 							className={`flex items-center gap-3 transition-all focus:outline-none ${
 								router.pathname === '/dashboard'
-									? 'bg-gray-100 rounded text-gray-900 text-base py-2 px-5 font-bold hover:text-gray-900'
+									? 'bg-gray-100 rounded text-gray-900 text-base py-2 px-5 font-bold'
 									: 'px-1 hover:text-gray-400'
 							}`}>
 							<DashboardIcon />
