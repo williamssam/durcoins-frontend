@@ -33,7 +33,9 @@ const Coin = () => {
 					<div>
 						<div className='flex items-center gap-2'>
 							<Image src={btcLogo} alt='Bitcoin logo' width={50} height={50} />
-							<p className='text-lg'>Bitcoin</p>
+							<p className='text-lg'>
+								<strong>Sell</strong> Bitcoin
+							</p>
 						</div>
 						<div>
 							<h3 className='font-black text-5xl mt-4'>&#8358;655.50/USD</h3>

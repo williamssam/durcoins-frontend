@@ -1,14 +1,20 @@
 import ArrowLeft from '@/assets/icons/ArrowLeft';
 import Warning from '@/assets/icons/Warning';
+import CoinRemitModal from '@/components/CoinRemitModal';
+import { BitcoinWidget } from '@/components/CoinWidgets';
 import { Converter } from '@/components/Dashboard/Converter';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
 import { Input } from '@/components/Input';
+import Modal from '@/components/Modal';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 const Buy = () => {
 	const router = useRouter();
+	const [isOpen, setIsOpen] = useState(false);
+	const closeModal = () => setIsOpen(false);
+	const openModal = () => setIsOpen(true);
 	return (
 		<>
 			<Head>
@@ -22,17 +28,18 @@ const Buy = () => {
 					<ArrowLeft />
 					Back
 				</button>
-				<div className='mt-10 grid grid-cols-2 gap-10'>
+				<div className='mt-5 grid grid-cols-2 gap-10'>
 					<div>
-						<h3 className='font-black text-3xl'>Buy Bitcoin</h3>
+						<h3 className='font-black text-4xl'>Buy Bitcoin</h3>
 
-						<div className='mt-6'>
+						<div className='mt-10'>
 							<Input
 								label='What amount do you have in mind (price)?'
 								type='number'
 							/>
 						</div>
 
+						{/* buy price */}
 						<div className='bg-gray-100 mt-3 py-6 px-10 rounded-md shadow-duro-coins'>
 							<p className=''>
 								You are sending this to any of the account below
@@ -88,11 +95,17 @@ const Buy = () => {
 							</div>
 						</div>
 
+						<button
+							onClick={openModal}
+							className='bg-gray-900 py-2 px-10 text-gray-100 rounded mt-5'>
+							Account Credited! 🚀
+						</button>
+
 						<Converter />
 					</div>
 
 					<div>
-						<div className='bg-red-200 mt-10 py-5 px-8 rounded-md relative overflow-hidden'>
+						<div className='bg-red-200 my-10  py-5 px-8 rounded-md relative overflow-hidden'>
 							<div className='absolute top-0 -left-10 text-red-100'>
 								<Warning size={120} />
 							</div>
@@ -113,27 +126,15 @@ const Buy = () => {
 								</ul>
 							</div>
 						</div>
-						<form className='flex flex-col gap-5 justify-center mt-10'>
-							<h3>Pls fill after funding any of the accounts</h3>
-							<Input label='Pls input account you fund' type='text' />
-							<Input label='How much did you send?' type='number' />
-							<Input type='file' label='Receipt' />
-							{/* input: */}
-							<div className='flex flex-col justify-center'>
-								<button
-									type='submit'
-									className='bg-gray-900 py-2 px-10 text-gray-100 rounded'>
-									Account Funded 🚀
-								</button>
-								<span className='text-xs text-center font-bold'>
-									Pls fund account before clicking this button to avoid blocking
-									account
-								</span>
-							</div>
-						</form>
+
+						<BitcoinWidget />
 					</div>
 				</div>
 			</section>
+
+			<Modal closeModal={closeModal} isOpen={isOpen}>
+				<CoinRemitModal closeModal={closeModal} />
+			</Modal>
 		</>
 	);
 };

@@ -60,10 +60,10 @@ const DashboardHeader = () => {
 				<nav className='flex flex-col gap-9'>
 					<Link href='/dashboard'>
 						<a
-							className={`flex items-center gap-3 transition-all hover:text-gray-400 focus:outline-none ${
+							className={`flex items-center gap-3 transition-all focus:outline-none ${
 								router.pathname === '/dashboard'
-									? 'bg-gray-200 rounded text-gray-900 text-base py-2 px-5 font-bold hover:text-gray-900'
-									: 'px-1'
+									? 'bg-gray-100 rounded text-gray-900 text-base py-2 px-5 font-bold hover:text-gray-900'
+									: 'px-1 hover:text-gray-400'
 							}`}>
 							<DashboardIcon />
 							Dashboard

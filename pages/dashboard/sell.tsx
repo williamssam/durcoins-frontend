@@ -9,14 +9,9 @@ import Image from 'next/image';
 import { ReactElement, useState } from 'react';
 
 const Sell = () => {
-	let [isOpen, setIsOpen] = useState(false);
-	function closeModal() {
-		setIsOpen(false);
-	}
-
-	function openModal() {
-		setIsOpen(true);
-	}
+	const [isOpen, setIsOpen] = useState(false);
+	const closeModal = () => setIsOpen(false);
+	const openModal = () => setIsOpen(true)
 	return (
 		<>
 			<Head>

@@ -11,6 +11,18 @@ button {
 	@apply focus:outline-none active:scale-95 transition-transform;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
 .hovered-link {
 	@apply relative transition-colors hover:text-gray-900 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 after:absolute after:content-[""] after:-bottom-[1px] after:left-0 after:w-full after:h-[1.5px] after:bg-gray-900 after:scale-x-0 after:origin-right after:transition-transform hover:after:scale-x-[100%] hover:after:origin-left;
 }
