@@ -1,3 +1,4 @@
+import Hamburger from '@/assets/icons/Hamburger';
 import Link from 'next/link';
 
 export const Nav = () => {
@@ -21,10 +22,10 @@ export const Nav = () => {
 	return (
 		// fixed top-3 left-1/2 -translate-x-1/2
 		<div className='container'>
-			<nav className='flex items-center justify-between w-full md:gap-12 text-gray-900 bg-gray-100 py-3 px-10 rounded-bl-lg rounded-br-lg'>
+			<nav className='flex items-center justify-between w-full md:gap-12 text-gray-900 bg-gray-100 py-3 px-5 md:px-10 rounded-bl-lg rounded-br-lg'>
 				<h1 className='font-black tracking-wide text-lg'>Dura-coins</h1>
 
-				<ul className='flex items-center gap-6'>
+				<ul className='hidden md:flex items-center gap-6'>
 					{navs?.map(({ id, link, name }) => (
 						<li key={id}>
 							<Link href={link}>
@@ -35,6 +36,10 @@ export const Nav = () => {
 						</li>
 					))}
 				</ul>
+
+				<button className='p-1 md:hidden'>
+					<Hamburger />
+				</button>
 			</nav>
 		</div>
 	);

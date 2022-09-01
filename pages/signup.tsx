@@ -13,8 +13,8 @@ const Signup: NextPage = () => {
 			<Head>
 				<title>Sign Up | Durocoins</title>
 			</Head>
-			<section className='flex flex-col justify-center md:grid md:grid-cols-5 py-6 md:py-0 text-gray-900 min-h-screen'>
-				<div className='col-span-3 flex flex-col justify-center bg-signup-bg bg-cover signup-pattern'>
+			<section className='grid grid-col-2 md:grid-cols-5 pb-6 md:py-0 text-gray-900 min-h-screen'>
+				<div className='md:col-span-3 h-40 md:h-full flex flex-col justify-center signup-pattern'>
 					{/* <Link href='/'>
 							<a className='text-2xl font-black text-center md:text-left tracking-wide uppercase'>
 								Duro-coins
@@ -26,10 +26,10 @@ const Signup: NextPage = () => {
 							<li>Get paid instantly.</li>
 						</ul> */}
 				</div>
-				<div className='col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center '>
+				<div className='md:col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center '>
 					<button
 						onClick={() => router.push('/')}
-						className='flex items-center gap-1 text-gray-800 rounded-md mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
+						className='flex items-center gap-1 text-gray-800 rounded-md md:mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
 						<ArrowLeft />
 						Back Home
 					</button>

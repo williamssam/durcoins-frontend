@@ -4,6 +4,7 @@ import Delete from '@/assets/icons/Delete';
 import Edit from '@/assets/icons/Edit';
 import { AddBankModal } from '@/components/AddBankModal';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
 import Modal from '@/components/Modal';
 import { UpdateBankModal } from '@/components/UpdateBankModal';
 import Head from 'next/head';
@@ -41,17 +42,17 @@ const BankDetails = () => {
 			</Modal>
 
 			<section className='pt-8'>
-				<header className='flex items-center gap-10'>
-					<h3 className='font-black text-5xl'>Bank Details</h3>
+				<div className='flex items-center flex-col md:flex-row md:gap-10'>
+					<DashboardTitle title='Bank Details' />
 
 					<button
 						onClick={() => openModal('add-account')}
 						className='py-1 pl-2 pr-4 bg-black rounded text-gray-100 text-sm flex items-center gap-2'>
 						<Add /> Add Account
 					</button>
-				</header>
+				</div>
 
-				<div className='mt-12 grid grid-cols-3 gap-5'>
+				<div className='my-12 grid grid-cols-1 md:grid-cols-3 gap-5'>
 					<div className='flex items-start justify-between bg-gray-50 px-8 py-6 rounded-md relative overflow-hidden'>
 						<div className='absolute -left-8 bottom-0 text-gray-300 text-opacity-20'>
 							<Bank size={200} />

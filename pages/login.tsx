@@ -13,12 +13,12 @@ const Login: NextPage = () => {
 			<Head>
 				<title>Login | Durocoins</title>
 			</Head>
-			<section className='flex flex-col justify-center md:grid md:grid-cols-5 py-6 md:py-0 text-gray-900 min-h-screen'>
-				<div className='col-span-3 flex flex-col justify-center bg-signup-bg bg-cover login-pattern'></div>
-				<div className='col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center'>
+			<section className='grid grid-col-2 md:grid-cols-5 pb-6 md:py-0 text-gray-900 min-h-screen'>
+				<div className='md:col-span-3 h-40 md:h-full flex flex-col justify-center login-pattern'></div>
+				<div className='md:col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center'>
 					<button
 						onClick={() => router.push('/')}
-						className='flex items-center gap-1 text-gray-800 rounded-md mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
+						className='flex items-center gap-1 text-gray-800 rounded-md md:mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
 						<ArrowLeft />
 						Back Home
 					</button>
@@ -60,7 +60,7 @@ const Login: NextPage = () => {
 					</form>
 
 					<Link href='/forgot-password'>
-						<a className='text-gray-600 text-center inline-block pt-3 text-sm focus:outline-none hovered-link'>
+						<a className='text-gray-600 flex-1 text-center inline-block pt-3 text-sm focus:outline-none hovered-link'>
 							Forgot your password?
 						</a>
 					</Link>

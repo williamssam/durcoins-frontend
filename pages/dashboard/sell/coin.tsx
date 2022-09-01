@@ -21,7 +21,7 @@ const Coin = () => {
 			<Head>
 				<title>Sell (Coin) - Duro-coin</title>
 			</Head>
-			<section>
+			<section className='px-2 md:px-0'>
 				<button
 					onClick={() => router.back()}
 					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
@@ -29,7 +29,7 @@ const Coin = () => {
 					Back
 				</button>
 
-				<div className='mt-10 grid grid-cols-2 gap-10'>
+				<div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-10'>
 					<div>
 						<div className='flex items-center gap-2'>
 							<Image src={btcLogo} alt='Bitcoin logo' width={50} height={50} />

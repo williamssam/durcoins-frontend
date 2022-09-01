@@ -1,6 +1,5 @@
-import Check from '@/assets/icons/Check';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { RadioGroup } from '@headlessui/react';
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
 import Head from 'next/head';
 import { ReactElement, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,15 +13,13 @@ const Dashboard: NextPageWithLayout = () => {
 			<Head>
 				<title>Dashboard - Dura-coins</title>
 			</Head>
-			<section className='pt-12'>
-				<header>
-					<p className='uppercase tracking-wider'>Welcome Back 🎉</p>
-					<h2 className='text-5xl font-black'>Good Afternoon, Samuel</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
-						nisi!
-					</p>
-				</header>
+			<section className='pt-12 px-2 md:px-0'>
+				<DashboardTitle
+					upperSubtitle='Welcome Back 🎉'
+					subtitle='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+						nisi!'
+					title='Good Afternoon, Samuel'
+				/>
 
 				<div className='flex flex-col items-center justify-center pt-20'>
 					<h3 className='font-bold text-xl'>
@@ -30,19 +27,7 @@ const Dashboard: NextPageWithLayout = () => {
 					</h3>
 
 					<div className='flex gap-10 pt-8'>
-						{/* <div className='bg-gray-400 h-60 w-60 rounded-md flex flex-col justify-center items-center'>
-							<p>Image</p>
-							<p className='uppercase tracking-wider text-2xl font-black'>
-								Crypto
-							</p>
-						</div>
-						<div className='bg-gray-400 h-60 w-60 rounded-md flex flex-col justify-center items-center'>
-							<p>Image</p>
-							<p className=''>
-								Giftcard
-							</p>
-						</div> */}
-						<RadioGroup value={selected} onChange={setSelected}>
+						{/* <RadioGroup value={selected} onChange={setSelected}>
 							<div className='flex gap-10'>
 								{plans.map((plan, index) => (
 									<RadioGroup.Option
@@ -65,12 +50,6 @@ const Dashboard: NextPageWithLayout = () => {
 														}`}>
 														{plan}
 													</RadioGroup.Label>
-													{/* <RadioGroup.Description
-																as='span'
-																className={`inline ${
-																	checked ? 'text-sky-100' : 'text-gray-500'
-																}`}>
-															</RadioGroup.Description> */}
 													{checked && (
 														<div className='absolute bottom-2 right-2 text-white'>
 															<Check size={36} />
@@ -82,7 +61,7 @@ const Dashboard: NextPageWithLayout = () => {
 									</RadioGroup.Option>
 								))}
 							</div>
-						</RadioGroup>
+						</RadioGroup> */}
 					</div>
 				</div>
 			</section>

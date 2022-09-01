@@ -4,6 +4,7 @@ import CoinRemitModal from '@/components/CoinRemitModal';
 import { BitcoinWidget } from '@/components/CoinWidgets';
 import { Converter } from '@/components/Dashboard/Converter';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
 import { Input } from '@/components/Input';
 import Modal from '@/components/Modal';
 import Head from 'next/head';
@@ -21,16 +22,16 @@ const Buy = () => {
 				<title>Buy (Bitcoin) - Duro-coin</title>
 			</Head>
 
-			<section>
+			<section className='px-2 md:px-0'>
 				<button
 					onClick={() => router.back()}
 					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
 					<ArrowLeft />
 					Back
 				</button>
-				<div className='mt-5 grid grid-cols-2 gap-10'>
+				<div className='mt-5 grid-cols-1 md:grid-cols-2 gap-10'>
 					<div>
-						<h3 className='font-black text-4xl'>Buy Bitcoin</h3>
+						<DashboardTitle title='Buy Bitcoin' />
 
 						<div className='mt-10'>
 							<Input
@@ -40,10 +41,8 @@ const Buy = () => {
 						</div>
 
 						{/* buy price */}
-						<div className='bg-gray-100 mt-3 py-6 px-10 rounded-md shadow-duro-coins'>
-							<p className=''>
-								You are sending this to any of the account below
-							</p>
+						<div className='bg-gray-100 mt-3 p-4 md:py-6 md:px-10 rounded-md shadow-duro-coins'>
+							<p>You are sending this to any of the account below</p>
 
 							<div className='font-bold text-2xl'>
 								<span>$450</span>
