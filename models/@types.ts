@@ -1,9 +1,9 @@
 // allow string or number as index
-interface StausObjectKeys {
+interface StatusObjectKeys {
 	[key: string]: string | number;
 }
 
-export interface StausObjectType extends StausObjectKeys {
+export interface StatusObjectType extends StatusObjectKeys {
 	approved: string;
 	pending: string;
 	pool: string;

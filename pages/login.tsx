@@ -15,7 +15,7 @@ const Login: NextPage = () => {
 			</Head>
 			<section className='grid grid-col-2 md:grid-cols-5 pb-6 md:py-0 text-gray-900 min-h-screen'>
 				<div className='md:col-span-3 h-40 md:h-full flex flex-col justify-center login-pattern'></div>
-				<div className='md:col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center'>
+				<div className='md:col-span-2 px-4 py-6 md:py-10 md:px-20 md:pr-32 md:self-center'>
 					<button
 						onClick={() => router.push('/')}
 						className='flex items-center gap-1 text-gray-800 rounded-md md:mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
@@ -30,7 +30,7 @@ const Login: NextPage = () => {
 							Sign In to Dura-coins
 						</h3>
 						<p className='pt-2 text-sm'>
-							Don&apos;t have an account😔?{' '}
+							Don&apos;t have an account😮?{' '}
 							<Link href='/signup'>
 								<a className='text-gray-500 font-bold hovered-link'>Join us</a>
 							</Link>
@@ -49,12 +49,12 @@ const Login: NextPage = () => {
 					</div>
 
 					<form className='flex flex-col gap-8 mt-10'>
-						<Input type='email' label='Email Address' />
+						<Input type='text' label='Email Address' />
 						<Input type='password' label='Password' />
 
 						<button
 							type='submit'
-							className='bg-gray-900 text-gray-100 py-3 rounded-md'>
+							className='bg-gray-900 text-gray-100 py-3 rounded-md transition-colors hover:bg-gray-800'>
 							Log in
 						</button>
 					</form>

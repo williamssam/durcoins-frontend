@@ -35,7 +35,7 @@ const Sell = () => {
 							{coins?.map(({ amount, id, image, name, symbol }) => (
 								<button
 									onClick={openModal}
-									className='flex items-center justify-between bg-gray-50 px-2 py-4 md:p-4 rounded-md transition-all hover:bg-gray-300'
+									className='flex items-center justify-between bg-gray-50 px-2 py-4 md:p-4 rounded-md transition-all hover:shadow-duro-coins'
 									key={id}>
 									<div className='flex items-center gap-3 md:gap-6'>
 										<Image

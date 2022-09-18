@@ -26,7 +26,7 @@ const Signup: NextPage = () => {
 							<li>Get paid instantly.</li>
 						</ul> */}
 				</div>
-				<div className='md:col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center '>
+				<div className='md:col-span-2 px-4 py-6 md:p-10 md:px-20 md:pr-32 md:self-center'>
 					<button
 						onClick={() => router.push('/')}
 						className='flex items-center gap-1 text-gray-800 rounded-md md:mt-5 text-xs hover:bg-gray-900 hover:text-gray-100 p-1'>
@@ -61,13 +61,18 @@ const Signup: NextPage = () => {
 
 					<form className='flex flex-col gap-8 mt-10'>
 						<Input type='text' label='Username' />
-						<Input type='email' label='Email Address' />
+						<Input type='text' label='Email Address' />
 						<Input type='text' label='Phone number' />
-						<Input type='password' label='Password' />
+						<div>
+							<Input type='password' label='Password' />
+							<p className='absolute text-xs text-gray-800 pt-1'>
+								Password must be eight character and include special characters
+							</p>
+						</div>
 
 						<button
 							type='submit'
-							className='bg-gray-900 text-gray-100 py-3 rounded-md'>
+							className='bg-gray-900 text-gray-100 py-3 mt-3 rounded-md transition-colors hover:bg-gray-800'>
 							Create an account
 						</button>
 					</form>

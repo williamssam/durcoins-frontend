@@ -1,4 +1,5 @@
 import Bank from '@/assets/icons/Bank';
+import Close from '@/assets/icons/Close';
 import DashboardIcon from '@/assets/icons/DashboardIcon';
 import Help from '@/assets/icons/Help';
 import Logout from '@/assets/icons/Logout';
@@ -8,7 +9,15 @@ import Wallet from '@/assets/icons/Wallet';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const DashboardHeader = () => {
+interface DashboardHeaderType {
+	openNav: boolean;
+	openDashboardMenu: () => void;
+}
+
+const DashboardHeader = ({
+	openNav,
+	openDashboardMenu,
+}: DashboardHeaderType) => {
 	const dashboardNav = [
 		{
 			title: 'Trade',
@@ -54,8 +63,16 @@ const DashboardHeader = () => {
 	const router = useRouter();
 
 	return (
-		<header className='hidden md:block md:col-span-1 m-2'>
-			<div className='bg-black text-gray-100 h-full rounded-xl px-8 py-10 flex flex-col justify-between relative'>
+		<header
+			className={`${
+				openNav ? 'flex absolute top-0 right-0 w-72 h-full z-50' : 'hidden'
+			} md:block md:col-span-1 md:m-2`}>
+			<button
+				className='md:hidden bg-black p-2 h-max text-gray-100 active:scale-100'
+				onClick={openDashboardMenu}>
+				<Close />
+			</button>
+			<div className='bg-black text-gray-100 h-full md:rounded-xl px-8 py-10 flex flex-col justify-between relative w-full'>
 				<h1 className='font-black tracking-wide text-2xl'>Dura-coins</h1>
 
 				<nav className='flex flex-col gap-9'>

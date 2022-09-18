@@ -6,7 +6,7 @@ const Hero = () => {
 		<div className='container py-20 md:py-6 flex flex-col justify-around md:grid md:grid-cols-4 md:place-items-center md:gap-20'>
 			<section className='col-span-2'>
 				<div className='md:max-w-[730px] mt-5 md:mt-0'>
-					<h2 className='text-[43px] leading-tight text-center md:text-left md:text-[80px] md:leading-none font-black'>
+					<h2 className='text-[43px] leading-normal text-center md:text-left md:text-[80px] md:leading-none font-black'>
 						Trade your <span>crypto</span> & <span>giftcard</span> with ease
 					</h2>
 					<p className='mt-3 text-center md:text-left max-w-md text-gray-300'>

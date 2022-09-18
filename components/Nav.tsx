@@ -1,13 +1,12 @@
-import Hamburger from '@/assets/icons/Hamburger';
 import Link from 'next/link';
 
 export const Nav = () => {
 	const navs = [
-		{
-			id: 1,
-			name: 'about',
-			link: '',
-		},
+		// {
+		// 	id: 1,
+		// 	name: 'about',
+		// 	link: '',
+		// },
 		{
 			id: 2,
 			name: 'log in',
@@ -22,10 +21,10 @@ export const Nav = () => {
 	return (
 		// fixed top-3 left-1/2 -translate-x-1/2
 		<div className='container'>
-			<nav className='flex items-center justify-between w-full md:gap-12 text-gray-900 bg-gray-100 py-3 px-5 md:px-10 rounded-bl-lg rounded-br-lg'>
+			<nav className='flex items-center justify-between w-full md:gap-12 text-gray-900 bg-gray-100 py-3 px-5 md:px-10 rounded-bl-xl rounded-br-xl shadow-duro-coins'>
 				<h1 className='font-black tracking-wide text-lg'>Dura-coins</h1>
 
-				<ul className='hidden md:flex items-center gap-6'>
+				<ul className='flex items-center gap-6'>
 					{navs?.map(({ id, link, name }) => (
 						<li key={id}>
 							<Link href={link}>
@@ -35,11 +34,14 @@ export const Nav = () => {
 							</Link>
 						</li>
 					))}
+					{/* <li>
+						<Link href='/dashboard'>
+							<a className='capitalize text-sm text-gray-700 hover:font-bold hovered-link'>
+								Dashboard
+							</a>
+						</Link>
+					</li> */}
 				</ul>
-
-				<button className='p-1 md:hidden'>
-					<Hamburger />
-				</button>
 			</nav>
 		</div>
 	);

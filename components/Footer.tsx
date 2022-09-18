@@ -1,7 +1,6 @@
 import Facebook from '@/assets/icons/Facebook';
 import Instagram from '@/assets/icons/Instagram';
 import Mail from '@/assets/icons/Mail';
-import Phone from '@/assets/icons/Phone';
 import Twitter from '@/assets/icons/Twitter';
 import Whatsapp from '@/assets/icons/Whatsapp';
 
@@ -46,7 +45,7 @@ export const Footer = () => {
 							<li>
 								<a
 									href=''
-									className='transition-colors hover:text-gray-700 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
+									className='transition-colors hover:text-gray-900 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
 									target='_blank'
 									rel='noreferrer'>
 									<Twitter />
@@ -55,7 +54,7 @@ export const Footer = () => {
 							<li>
 								<a
 									href=''
-									className='transition-colors hover:text-gray-700 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
+									className='transition-colors hover:text-gray-900 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
 									target='_blank'
 									rel='noreferrer'>
 									<Instagram />
@@ -64,7 +63,7 @@ export const Footer = () => {
 							<li>
 								<a
 									href=''
-									className='transition-colors hover:text-gray-700 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
+									className='transition-colors hover:text-gray-900 focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700'
 									target='_blank'
 									rel='noreferrer'>
 									<Facebook />

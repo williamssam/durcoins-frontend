@@ -1,5 +1,6 @@
 import Hamburger from '@/assets/icons/Hamburger';
 import Notification from '@/assets/icons/Notification';
+import { useState } from 'react';
 import DashboardHeader from './DashboardHeader';
 
 interface DashboardLayoutProps {
@@ -7,9 +8,16 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+	const [openNav, setOpenNav] = useState(false);
+
+	const openDashboardMenu = () => setOpenNav(!openNav);
+
 	return (
 		<main className='grid grid-cols-5 min-h-screen'>
-			<DashboardHeader />
+			<DashboardHeader
+				openNav={openNav}
+				openDashboardMenu={openDashboardMenu}
+			/>
 			<div className='bg-gray-200 col-span-full md:col-span-4 px-2 md:px-10 py-3'>
 				<div className='flex justify-between md:grid md:grid-cols-2 items-center bg-white py-3 px-4 md:py-2 md:px-10 rounded-md shadow-duro-coins'>
 					<p className='md:justify-self-end font-bold uppercase tracking-wider'>
@@ -26,7 +34,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
 						</button>
 					</div>
 
-					<button className='p-1 md:hidden'>
+					<button className='p-1 md:hidden' onClick={openDashboardMenu}>
 						<Hamburger />
 					</button>
 				</div>

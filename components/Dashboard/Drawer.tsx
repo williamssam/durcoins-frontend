@@ -88,9 +88,9 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 										<h3 className='text-xs uppercase font-bold text-gray-500'>
 											Hash
 										</h3>
-										<p>
+										<a href='#' target='_blank' rel='noreferrer'>
 											7c82c64175e26b9be164b9a912964d08d22c281b464fcfe9c67674538624cd9a{' '}
-										</p>
+										</a>
 									</li>
 									<li>
 										<h3 className='text-xs uppercase font-bold text-gray-500'>
@@ -124,9 +124,9 @@ const Drawer = ({ isOpen, closeModal }: DrawerProps) => {
 								</ul>
 								<button
 									type='button'
-									className='inline-flex justify-center rounded-md border border-transparent bg-gray-300 px-4 py-2 mt-5 text-sm text-gray-900 font-bold hover:bg-gray-400 focus:outline-none'
+									className='inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 mt-5 text-sm text-gray-100 font-bold hover:bg-gray-800 focus:outline-none'
 									onClick={closeModal}>
-									Got it, thanks! 😍
+									Got it, thanks! 👍
 								</button>
 								{/* <div className='absolute bottom-0 right-0 -z-[1]'>
 									<Image

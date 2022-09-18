@@ -29,7 +29,7 @@ const Buy = () => {
 					<ArrowLeft />
 					Back
 				</button>
-				<div className='mt-5 grid-cols-1 md:grid-cols-2 gap-10'>
+				<div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-10'>
 					<div>
 						<DashboardTitle title='Buy Bitcoin' />
 

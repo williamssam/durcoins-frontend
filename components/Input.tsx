@@ -1,20 +1,22 @@
-import EyeClose from '@/assets/icons/EyeClose';
-import EyeOpen from '@/assets/icons/EyeOpen';
-import { useState } from 'react';
+import EyeClose from '@/assets/icons/EyeClose'
+import EyeOpen from '@/assets/icons/EyeOpen'
+import { useState } from 'react'
 
 interface InputProps {
-	type: string;
-	label: string;
+	type: string
+	label: string
 }
 
 export const Input = ({ type, label }: InputProps) => {
-	const [passwordType, setPasswordType] = useState(false);
+	const [passwordType, setPasswordType] = useState(false)
 	return (
 		<div>
 			<label className='relative'>
 				<input
 					// {...rest}
-					type={type}
+					type={
+						type === 'password' ? (passwordType ? 'password' : 'text') : type
+					}
 					required
 					autoComplete='false'
 					className='py-1 w-full text-gray-900 border-b-2 font-bold border-b-gray-400 outline-none focus:border-gray-400 transition duration-200 peer valid:border-blue-600 bg-transparent'
@@ -32,7 +34,7 @@ export const Input = ({ type, label }: InputProps) => {
 					</button>
 				)}
 			</label>
-			{/* <span className='text-xs text-red-600 italic'>Error asshoel</span> */}
+			{/* <span className='text-xs text-red-600 italic'>Error asshole</span> */}
 		</div>
-	);
-};
+	)
+}

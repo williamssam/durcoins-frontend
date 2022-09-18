@@ -21,7 +21,7 @@ const Coin = () => {
 			<Head>
 				<title>Sell (Coin) - Duro-coin</title>
 			</Head>
-			<section className='px-2 md:px-0'>
+			<section className='pb-8 px-2 md:px-0'>
 				<button
 					onClick={() => router.back()}
 					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
