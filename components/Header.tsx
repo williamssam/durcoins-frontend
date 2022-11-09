@@ -13,7 +13,7 @@ export const Header = () => {
 					<span>Site still under construction</span>
 				</p>
 				<a
-					href='https://api.whatsapp.com/send?phone=2348131200424&text=Thank%20you%20for%20contacting%20DuraCoins%20%F0%9F%A4%A9.%20%20What%20do%20you%20want%20to%20trade%20with%20us%2C%20Giftcard%2C%20BTC%20or%20USDT%E2%9D%93'
+					href='https://api.whatsapp.com/send?phone=2348037604395&text=Thank%20you%20for%20contacting%20DuraCoins%20%F0%9F%A4%A9.%20%20What%20do%20you%20want%20to%20trade%20with%20us%2C%20Giftcard%2C%20BTC%20or%20USDT%E2%9D%93'
 					className='uppercase text-xs flex items-center gap-1 font-bold text-gray-100 bg-green-600 hover:bg-green-800 py-2 px-4 rounded-md transition-all'>
 					<Whatsapp /> <span>Chat with us on WhatsApp</span>
 				</a>
