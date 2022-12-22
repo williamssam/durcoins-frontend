@@ -1,8 +1,8 @@
-import Facebook from '@/assets/icons/Facebook';
-import Instagram from '@/assets/icons/Instagram';
-import Mail from '@/assets/icons/Mail';
-import Twitter from '@/assets/icons/Twitter';
-import Whatsapp from '@/assets/icons/Whatsapp';
+import Facebook from '@/assets/icons/Facebook'
+import Instagram from '@/assets/icons/Instagram'
+import Mail from '@/assets/icons/Mail'
+import Twitter from '@/assets/icons/Twitter'
+import Whatsapp from '@/assets/icons/Whatsapp'
 
 export const Footer = () => {
 	return (
@@ -10,7 +10,7 @@ export const Footer = () => {
 			<div className='container py-5 lowercase'>
 				<div className='flex flex-col md:flex-row items-center justify-between'>
 					<div>
-						<h4 className='font-black tracking-wide text-2xl'>Dura-coins</h4>
+						<h4 className='font-black tracking-wide text-2xl'>DuraCoins</h4>
 						<p className='text-[10px]'>&copy; 2022 | All rights reserved.</p>
 					</div>
 
@@ -74,5 +74,5 @@ export const Footer = () => {
 				</div>
 			</div>
 		</footer>
-	);
-};
+	)
+}

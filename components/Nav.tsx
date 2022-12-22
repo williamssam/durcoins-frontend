@@ -1,5 +1,6 @@
 import MetaMask from '@/assets/logo/MetaMask'
 import Link from 'next/link'
+import { Logo } from './Logo'
 
 export const Nav = () => {
 	const navs = [
@@ -23,7 +24,8 @@ export const Nav = () => {
 		// fixed top-3 left-1/2 -translate-x-1/2
 		<div className='container'>
 			<nav className='flex items-center justify-between w-full md:gap-12 text-gray-900 bg-gray-100 py-2 px-5 md:px-10 rounded-bl-xl rounded-br-xl shadow-duro-coins'>
-				<h1 className='font-black tracking-wide text-lg'>Dura-coins</h1>
+				{/* <h1 className='font-black tracking-wide text-lg'>DuraCoins</h1> */}
+				<Logo />
 
 				<ul className='flex items-center gap-6'>
 					{navs?.map(({ id, link, name }) => (

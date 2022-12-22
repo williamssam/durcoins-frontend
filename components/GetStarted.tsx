@@ -10,21 +10,21 @@ export const GetStarted = () => {
 
 				<div className='grid md:grid-cols-3 pt-16 gap-20 max-w-[800px] text-center'>
 					<div>
-						<h3>Sign up</h3>
+						<h3 className='font-bold text-lg'>Sign up</h3>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse,
 							neque!
 						</p>
 					</div>
 					<div>
-						<h3>Fund</h3>
+						<h3 className='font-bold text-lg'>Fund</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 							Repudiandae, error?
 						</p>
 					</div>
 					<div>
-						<h3>Get paid</h3>
+						<h3 className='font-bold text-lg'>Get paid</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 							Repudiandae, error?
@@ -33,5 +33,5 @@ export const GetStarted = () => {
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}

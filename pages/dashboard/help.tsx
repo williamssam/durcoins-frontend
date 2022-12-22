@@ -1,24 +1,25 @@
-import Facebook from '@/assets/icons/Facebook';
-import Mail from '@/assets/icons/Mail';
-import Phone from '@/assets/icons/Phone';
-import Twitter from '@/assets/icons/Twitter';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import Head from 'next/head';
-import { ReactElement } from 'react';
+import Facebook from '@/assets/icons/Facebook'
+import Mail from '@/assets/icons/Mail'
+import Phone from '@/assets/icons/Phone'
+import Twitter from '@/assets/icons/Twitter'
+import Whatsapp from '@/assets/icons/Whatsapp'
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import Head from 'next/head'
+import { ReactElement } from 'react'
 
 const Help = () => {
 	return (
 		<>
 			<Head>
-				<title>Help - Dura-coins</title>
+				<title>Help - DuraCoins</title>
 			</Head>
 			<section>
 				<h2 className='text-5xl font-black mt-14'>Help Center</h2>
 				<p className='pt-1 '>Hi, how can we help you?</p>
 
 				<div className='mt-5'>
-					<button className='text-sm font-bold bg-gray-800 text-gray-100 py-3 px-5 rounded-md transition-all hover:bg-gray-900'>
-						Chat on Whatsapp
+					<button className='text-sm flex items-center gap-2 font-bold bg-green-600 text-gray-100 py-3 px-5 rounded-md transition-all hover:bg-green-800'>
+						<Whatsapp /> <span>Chat on Whatsapp</span>
 					</button>
 				</div>
 				{/* <p>All frequently asked questions are answered in the FAQ section</p> */}
@@ -47,11 +48,11 @@ const Help = () => {
 				</div>
 			</section>
 		</>
-	);
-};
+	)
+}
 
 Help.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default Help;
+export default Help

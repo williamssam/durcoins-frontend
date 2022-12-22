@@ -1,21 +1,21 @@
-import ArrowLeft from '@/assets/icons/ArrowLeft';
-import Warning from '@/assets/icons/Warning';
-import { Converter } from '@/components/Dashboard/Converter';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import qrCode from '@/public/bitcoinaddress.svg';
-import btcLogo from '@/public/btc-logo.png';
-import Head from 'next/head';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { ReactElement } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
+import ArrowLeft from '@/assets/icons/ArrowLeft'
+import Warning from '@/assets/icons/Warning'
+import { Converter } from '@/components/Dashboard/Converter'
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import qrCode from '@/public/bitcoinaddress.svg'
+import btcLogo from '@/public/btc-logo.png'
+import Head from 'next/head'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { ReactElement } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 const Coin = () => {
-	const router = useRouter();
+	const router = useRouter()
 	const notify = () => {
-		toast.success('🥳 Address Copied!!');
-	};
+		toast.success('🥳 Address Copied!!')
+	}
 	return (
 		<>
 			<Head>
@@ -24,7 +24,7 @@ const Coin = () => {
 			<section className='pb-8 px-2 md:px-0'>
 				<button
 					onClick={() => router.back()}
-					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
+					className='flex items-center gap-1 text-gray-800 rounded mt-5 hover:bg-gray-900 hover:text-gray-100 py-1 px-2'>
 					<ArrowLeft />
 					Back
 				</button>
@@ -75,11 +75,11 @@ const Coin = () => {
 							<Image src={qrCode} alt='qr code' width={300} height={300} />
 						</div>
 
-						<p className='tracking-widest uppercase text-center text-gray-500 mt-3'>
+						<p className='tracking-widest uppercase text-center text-gray-500'>
 							OR
 						</p>
 
-						<div className='mx-auto mt-8'>
+						<div className='mx-auto'>
 							<p className='text-center text-gray-700 uppercase text-sm'>
 								Copy deposit address
 							</p>
@@ -106,11 +106,11 @@ const Coin = () => {
 				theme='dark'
 			/>
 		</>
-	);
-};
+	)
+}
 
 Coin.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default Coin;
+export default Coin

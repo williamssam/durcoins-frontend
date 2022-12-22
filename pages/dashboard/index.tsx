@@ -1,21 +1,21 @@
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
-import Head from 'next/head';
-import { ReactElement, useState } from 'react';
-import 'react-toastify/dist/ReactToastify.css';
-import { NextPageWithLayout } from '../_app';
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle'
+import Head from 'next/head'
+import { ReactElement, useState } from 'react'
+import 'react-toastify/dist/ReactToastify.css'
+import { NextPageWithLayout } from '../_app'
 
 const Dashboard: NextPageWithLayout = () => {
-	const plans = ['Crypto', 'GiftCards'];
-	const [selected, setSelected] = useState('');
+	const plans = ['Crypto', 'GiftCards']
+	const [selected, setSelected] = useState('')
 	return (
 		<>
 			<Head>
-				<title>Dashboard - Dura-coins</title>
+				<title>Dashboard - DuraCoins</title>
 			</Head>
 			<section className='pt-12 px-2 md:px-0'>
 				<DashboardTitle
-					upperSubtitle='Welcome Back 🎉'
+					upperSubtitle='Welcome Back 👋'
 					subtitle='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
 						nisi!'
 					title='Good Afternoon, Samuel'
@@ -66,11 +66,11 @@ const Dashboard: NextPageWithLayout = () => {
 				</div>
 			</section>
 		</>
-	);
-};
+	)
+}
 
 Dashboard.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default Dashboard;
+export default Dashboard

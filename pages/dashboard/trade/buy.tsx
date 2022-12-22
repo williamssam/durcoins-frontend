@@ -1,21 +1,20 @@
-import ArrowLeft from '@/assets/icons/ArrowLeft';
-import Warning from '@/assets/icons/Warning';
-import CoinRemitModal from '@/components/CoinRemitModal';
-import { BitcoinWidget } from '@/components/CoinWidgets';
-import { Converter } from '@/components/Dashboard/Converter';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
-import { Input } from '@/components/Input';
-import Modal from '@/components/Modal';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { ReactElement, useState } from 'react';
+import ArrowLeft from '@/assets/icons/ArrowLeft'
+import Warning from '@/assets/icons/Warning'
+import CoinRemitModal from '@/components/CoinRemitModal'
+import { Converter } from '@/components/Dashboard/Converter'
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle'
+import { Input } from '@/components/Input'
+import Modal from '@/components/Modal'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { ReactElement, useState } from 'react'
 
 const Buy = () => {
-	const router = useRouter();
-	const [isOpen, setIsOpen] = useState(false);
-	const closeModal = () => setIsOpen(false);
-	const openModal = () => setIsOpen(true);
+	const router = useRouter()
+	const [isOpen, setIsOpen] = useState(false)
+	const closeModal = () => setIsOpen(false)
+	const openModal = () => setIsOpen(true)
 	return (
 		<>
 			<Head>
@@ -25,7 +24,7 @@ const Buy = () => {
 			<section className='px-2 md:px-0'>
 				<button
 					onClick={() => router.back()}
-					className='flex items-center gap-1 text-gray-800 rounded-md mt-5 hover:bg-gray-900 hover:text-gray-100 p-1'>
+					className='flex items-center gap-1 text-gray-800 rounded mt-5 hover:bg-gray-900 hover:text-gray-100 py-1 px-2'>
 					<ArrowLeft />
 					Back
 				</button>
@@ -126,7 +125,7 @@ const Buy = () => {
 							</div>
 						</div>
 
-						<BitcoinWidget />
+						{/* <BitcoinWidget /> */}
 					</div>
 				</div>
 			</section>
@@ -135,11 +134,11 @@ const Buy = () => {
 				<CoinRemitModal closeModal={closeModal} />
 			</Modal>
 		</>
-	);
-};
+	)
+}
 
 Buy.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default Buy;
+export default Buy

@@ -1,6 +1,6 @@
-import Handshake from '@/assets/icons/Handshake';
-import Swap from '@/assets/icons/Swap';
-import Wallet from '@/assets/icons/Wallet';
+import Handshake from '@/assets/icons/Handshake'
+import Swap from '@/assets/icons/Swap'
+import Wallet from '@/assets/icons/Wallet'
 
 export const DetailsSection = () => {
 	const details = [
@@ -25,7 +25,7 @@ export const DetailsSection = () => {
 			content:
 				'Instantly swap and trade your crypto assets on the go without much stress',
 		},
-	];
+	]
 	return (
 		<section>
 			<div className='container mt-20 md:mt-28 flex flex-col items-center'>
@@ -35,7 +35,7 @@ export const DetailsSection = () => {
 							Easily trade and manage your crypto wallet
 						</h2>
 						<p className='pt-5 text-gray-600'>
-							Duro-coins is a p2p trading platform designed with speed, security
+							DuraCoins is a p2p trading platform designed with speed, security
 							and quality of service as our number one priority. Trade with ease
 							and speed.
 						</p>
@@ -57,5 +57,5 @@ export const DetailsSection = () => {
 				</ul>
 			</div>
 		</section>
-	);
-};
+	)
+}

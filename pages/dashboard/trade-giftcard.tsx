@@ -1,31 +1,28 @@
-import { BuySellModal } from '@/components/BuySellModal';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
-import Modal from '@/components/Modal';
-import { coins } from '@/data/coins';
-import Head from 'next/head';
-import Image from 'next/image';
-import { ReactElement, useState } from 'react';
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle'
+import { coins } from '@/data/coins'
+import Head from 'next/head'
+import Image from 'next/image'
+import { ReactElement } from 'react'
 
-const Sell = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const closeModal = () => setIsOpen(false);
-	const openModal = () => setIsOpen(true);
+const TradeGiftCard = () => {
+	// const [isOpen, setIsOpen] = useState(false)
+	// const closeModal = () => setIsOpen(false)
+	// const openModal = () => setIsOpen(true)
 	return (
 		<>
 			<Head>
-				<title>Sell - Dura-coins</title>
+				<title>Sell - DuraCoins</title>
 			</Head>
 
-			<Modal closeModal={closeModal} isOpen={isOpen}>
+			{/* <Modal closeModal={closeModal} isOpen={isOpen}>
 				<BuySellModal />
-			</Modal>
+			</Modal> */}
 
 			<section className='pt-8 px-2 md:px-0'>
 				<DashboardTitle
-					title='Sell/Buy Crypto & GiftCard'
-					subtitle='What would you love to sell or buy, we buy and sell both crypto and
-						giftcards?'
+					title='Trade GiftCard'
+					subtitle='What giftcard(s) would you love to sell or buy?'
 				/>
 
 				<div>
@@ -34,7 +31,7 @@ const Sell = () => {
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-3'>
 							{coins?.map(({ amount, id, image, name, symbol }) => (
 								<button
-									onClick={openModal}
+									// onClick={openModal}
 									className='flex items-center justify-between bg-gray-50 px-2 py-4 md:p-4 rounded-md transition-all hover:shadow-duro-coins'
 									key={id}>
 									<div className='flex items-center gap-3 md:gap-6'>
@@ -113,11 +110,11 @@ const Sell = () => {
 				</p>
 			</section>
 		</>
-	);
-};
+	)
+}
 
-Sell.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+TradeGiftCard.getLayout = function getLayout(page: ReactElement) {
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default Sell;
+export default TradeGiftCard

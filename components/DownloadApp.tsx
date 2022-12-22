@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import playStoreImg from '../public/play-store.png';
+import Image from 'next/image'
+import playStoreImg from '../public/play-store.png'
 
 export const DownloadApp = () => {
 	return (
@@ -10,16 +10,16 @@ export const DownloadApp = () => {
 						Download our app
 					</h2>
 					<p className='pt-2 text-gray-600 md:w-96'>
-						Get the best mobile experience on <strong>duro-coins</strong>{' '}
-						mobile. Download our app today
+						Get the best mobile experience on <strong>DuraCoins</strong> mobile.
+						Download our app today
 					</p>
 
-					<div className='pt-10'>
+					<div className='pt-6'>
 						<Image
 							src={playStoreImg}
 							alt='play store'
-							width={200}
-							height={60}
+							width={160}
+							height={50}
 						/>
 					</div>
 				</header>
@@ -42,5 +42,5 @@ export const DownloadApp = () => {
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}

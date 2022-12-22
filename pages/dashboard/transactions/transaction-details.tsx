@@ -1,12 +1,12 @@
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import Head from 'next/head';
-import { ReactElement } from 'react';
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import Head from 'next/head'
+import { ReactElement } from 'react'
 
 const TransactionsDetails = () => {
 	return (
 		<>
 			<Head>
-				<title>Transactions Details - Dura-coins</title>
+				<title>Transactions Details - DuraCoins</title>
 			</Head>
 			<div>
 				<p>
@@ -17,11 +17,11 @@ const TransactionsDetails = () => {
 				</p>
 			</div>
 		</>
-	);
-};
+	)
+}
 
 TransactionsDetails.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default TransactionsDetails;
+export default TransactionsDetails

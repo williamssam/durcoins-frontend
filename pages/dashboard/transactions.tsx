@@ -61,7 +61,7 @@ const Transactions = () => {
 	return (
 		<>
 			<Head>
-				<title>Transactions - Dura-coins</title>
+				<title>Transactions - DuraCoins</title>
 			</Head>
 			<section className='mt-8 text-gray-900'>
 				<DashboardTitle title='Transactions' />

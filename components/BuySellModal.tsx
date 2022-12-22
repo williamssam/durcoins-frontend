@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export const BuySellModal = () => {
 	return (
@@ -9,17 +9,17 @@ export const BuySellModal = () => {
 			{/* </div> */}
 
 			<div className='flex flex-col mt-10 gap-5 font-bold text-lg'>
-				<Link href='/dashboard/sell/coin'>
+				<Link href='/dashboard/trade/coin'>
 					<a className='flex items-center justify-center bg-gray-900 p-2 text-gray-100 rounded-md'>
 						Sell
 					</a>
 				</Link>
-				<Link href='/dashboard/sell/buy'>
+				<Link href='/dashboard/trade/buy'>
 					<a className='flex items-center justify-center bg-gray-900 p-2 text-gray-100 rounded-md'>
 						Buy
 					</a>
 				</Link>
 			</div>
 		</div>
-	);
-};
+	)
+}

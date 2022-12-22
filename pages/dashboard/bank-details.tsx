@@ -1,40 +1,40 @@
-import Add from '@/assets/icons/Add';
-import Bank from '@/assets/icons/Bank';
-import Delete from '@/assets/icons/Delete';
-import Edit from '@/assets/icons/Edit';
-import { AddBankModal } from '@/components/AddBankModal';
-import DashboardLayout from '@/components/Dashboard/DashboardLayout';
-import { DashboardTitle } from '@/components/Dashboard/DashboardTitle';
-import Modal from '@/components/Modal';
-import { UpdateBankModal } from '@/components/UpdateBankModal';
-import Head from 'next/head';
-import { ReactElement, SetStateAction, useState } from 'react';
+import Add from '@/assets/icons/Add'
+import Bank from '@/assets/icons/Bank'
+import Delete from '@/assets/icons/Delete'
+import Edit from '@/assets/icons/Edit'
+import { AddBankModal } from '@/components/AddBankModal'
+import DashboardLayout from '@/components/Dashboard/DashboardLayout'
+import { DashboardTitle } from '@/components/Dashboard/DashboardTitle'
+import Modal from '@/components/Modal'
+import { UpdateBankModal } from '@/components/UpdateBankModal'
+import Head from 'next/head'
+import { ReactElement, SetStateAction, useState } from 'react'
 
 const BankDetails = () => {
-	let [isOpen, setIsOpen] = useState(false);
-	const [modalType, setModalType] = useState('');
+	let [isOpen, setIsOpen] = useState(false)
+	const [modalType, setModalType] = useState('')
 
 	function closeModal() {
-		setIsOpen(false);
+		setIsOpen(false)
 	}
 
 	function openModal(type: SetStateAction<string>) {
-		setIsOpen(true);
-		setModalType(type);
+		setIsOpen(true)
+		setModalType(type)
 	}
 
 	const changeModal = () => {
 		if (modalType === 'add-account') {
-			return <AddBankModal closeModal={closeModal} />;
+			return <AddBankModal closeModal={closeModal} />
 		} else if (modalType === 'edit-account') {
-			return <UpdateBankModal closeModal={closeModal} />;
+			return <UpdateBankModal closeModal={closeModal} />
 		}
-	};
+	}
 
 	return (
 		<>
 			<Head>
-				<title>Bank Details - Dura-coins</title>
+				<title>Bank Details - DuraCoins</title>
 			</Head>
 			<Modal closeModal={closeModal} isOpen={isOpen}>
 				{/* <UpdateBankModal closeModal={closeModal} /> */}
@@ -140,11 +140,11 @@ const BankDetails = () => {
 				</div>
 			</section>
 		</>
-	);
-};
+	)
+}
 
 BankDetails.getLayout = function getLayout(page: ReactElement) {
-	return <DashboardLayout>{page}</DashboardLayout>;
-};
+	return <DashboardLayout>{page}</DashboardLayout>
+}
 
-export default BankDetails;
+export default BankDetails

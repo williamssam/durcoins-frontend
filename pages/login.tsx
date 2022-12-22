@@ -1,13 +1,13 @@
-import ArrowLeft from '@/assets/icons/ArrowLeft';
-import { Input } from '@/components/Input';
-import Google from 'assets/icons/Google';
-import { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import ArrowLeft from '@/assets/icons/ArrowLeft'
+import { Input } from '@/components/Input'
+import Google from 'assets/icons/Google'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Login: NextPage = () => {
-	const router = useRouter();
+	const router = useRouter()
 	return (
 		<>
 			<Head>
@@ -27,7 +27,7 @@ const Login: NextPage = () => {
 							Start your trading journey
 						</p>
 						<h3 className='font-black text-2xl md:text-4xl'>
-							Sign In to Dura-coins
+							Sign In to DuraCoins
 						</h3>
 						<p className='pt-2 text-sm'>
 							Don&apos;t have an account😮?{' '}
@@ -67,6 +67,6 @@ const Login: NextPage = () => {
 				</div>
 			</section>
 		</>
-	);
-};
-export default Login;
+	)
+}
+export default Login

@@ -1,13 +1,13 @@
-import ArrowLeft from '@/assets/icons/ArrowLeft';
-import { Input } from '@/components/Input';
-import Google from 'assets/icons/Google';
-import { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import ArrowLeft from '@/assets/icons/ArrowLeft'
+import { Input } from '@/components/Input'
+import Google from 'assets/icons/Google'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Signup: NextPage = () => {
-	const router = useRouter();
+	const router = useRouter()
 	return (
 		<>
 			<Head>
@@ -17,7 +17,7 @@ const Signup: NextPage = () => {
 				<div className='md:col-span-3 h-40 md:h-full flex flex-col justify-center signup-pattern'>
 					{/* <Link href='/'>
 							<a className='text-2xl font-black text-center md:text-left tracking-wide uppercase'>
-								Duro-coins
+								DuraCoins
 							</a>
 						</Link>
 						<ul className='sr-only md:not-sr-only'>
@@ -73,12 +73,12 @@ const Signup: NextPage = () => {
 						<button
 							type='submit'
 							className='bg-gray-900 text-gray-100 py-3 mt-3 rounded-md transition-colors hover:bg-gray-800'>
-							Create an account
+							Create account
 						</button>
 					</form>
 				</div>
 			</section>
 		</>
-	);
-};
-export default Signup;
+	)
+}
+export default Signup

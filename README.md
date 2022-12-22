@@ -1,6 +1,6 @@
-# DUROCOINS
+# DURACOINS
 
-Duro-coins is a p2p trading platform for cryptocurrencies and giftcards designed with speed, security and quality of service as our number one priority.
+DuraCoins is a p2p trading platform for cryptocurrencies and giftcards designed with speed, security and quality of service as our number one priority.
 
 ## Tech Stack
 
